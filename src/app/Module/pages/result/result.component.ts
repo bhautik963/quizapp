@@ -23,8 +23,8 @@ export class ResultComponent implements OnInit {
     this.quizService.correctAnsCount = 0;
     this.getProfileDetails();
     this.getAnswers();
-this.filteredResult();
-
+    this.filteredResult();
+    this.submit();
   }
 
   getProfileDetails() {
