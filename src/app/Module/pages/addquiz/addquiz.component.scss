@@ -1,0 +1,224 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+.header {
+  justify-content: space-between;
+}
+
+.user-profile {
+  margin-left: 15px;
+}
+
+.mat-sidenav-container {
+  height: 100%;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.mat-nav-list .mat-list-item {
+  font-size: 15px;
+}
+
+.nav-tool-items {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.user-profile {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.hamburger {
+  visibility: hidden !important;
+}
+
+.mat-sidenav,
+.mat-sidenav-content {
+  padding: 15px;
+}
+.mat-list-item{
+  color: white;
+  font-size: 16px;
+}
+
+.mat-list-item.active {
+  background:white;
+}
+
+.mat-cell{
+  height: 100px;
+  text-decoration: white;
+  color: aliceblue;
+  font-size: 18px;
+}
+
+.mat-header-cell{
+  height: 100px;
+  text-decoration: white;
+  color: black;
+  font-size: 18px;
+}
+
+.mat-table{
+  width: 100px;
+  background-color:steelblue;
+  color: white;
+}
+.mat-sidenav-content {
+  padding: 25px 40px 0;
+}
+
+.mat-sidenav {
+  background-color:lightgray;
+  width: 250px;
+}
+
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+mat-sidenav mat-icon {
+  margin-right: 12px;
+}
+
+.hamburger {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.mat-radio-button,
+.mat-radio-group {
+  margin-right: 25px;
+}
+
+.controlers-wrapper>* {
+  width: 100%;
+  padding: 0;
+}
+
+.misc-bottom-padding {
+  margin: 8px 0 10px;
+}
+
+.misc-bottom-padding mat-label {
+  margin-right: 15px;
+}
+
+mat-radio-group mat-radio-button {
+  margin-left: 5px;
+}
+
+.button-wrapper button {
+  margin-right: 5px;
+}
+
+table.mat-table,
+table {
+  width: 100%;
+}
+
+.inner-wrapper {
+  padding: 15px 0 130px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.inner-wrapper mat-card {
+  display: inline-block;
+  margin: 3% 6% 0 0;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+}
+
+.full-wrapper {
+  width: 100%;
+}
+
+.multiple-items {
+  position: relative;
+}
+
+.multiple-items .tooltip-info {
+  right: 0;
+  top: 7px;
+  cursor: pointer;
+  color: #a1a7c7;
+  position: absolute;
+  font-size: 20px;
+}
+
+
+
+.no-data {
+  text-align: center;
+  padding-top: 30px;
+  color: #6c75a9;
+}
+
+.button-wrapper {
+  margin: 20px 0 0 0;
+}
+
+
+@media (max-width: 1024px) {
+
+  .inner-wrapper mat-card {
+    width: 100%;
+  }
+
+  .mat-sidenav-content {
+    padding: 20px 20px 0;
+  }
+
+  .misc-bottom-padding mat-label {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .mat-sidenav {
+    width: 230px;
+  }
+
+  .mat-nav-list .mat-list-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-tool-items {
+    margin-right: 0;
+  }
+
+  .hamburger {
+    visibility: visible !important;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  float: right;
+}
+
+
+.mat-input-element {
+  color: slategray;
+}
+.mat-form-field {
+  color: black  ;
+  font-size: 16px;
+}
+.mat-form-field-underline {
+  background-color: slategray;
+}
+.mat-form-field-ripple {
+  background-color: slategray;
+}
+.mat-form-field-required-marker {
+  color: slategray;
+}

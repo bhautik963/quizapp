@@ -1,0 +1,18 @@
+<app-adminnav></app-adminnav>
+<div class="container" style="margin-top: 100px; top: 10px;" >
+<form [formGroup]="category">
+    <h1>Add Category</h1>
+    <mat-card class="row">
+        <mat-card-title>Title</mat-card-title>
+        <mat-form-field appearance="outline" >
+            <input placeholder="Enter Title" formControlName='Title' class="w-100" matInput>
+        </mat-form-field>
+        <mat-card-title>Discription</mat-card-title>
+        <mat-form-field appearance="outline">
+            <input matInput formControlName='Discription' placeholder="Enter Discription">
+        </mat-form-field>
+        <button mat-flat-button color='primary' (click)="addcategory()">Submit</button>
+    </mat-card>
+</form>
+</div>
+

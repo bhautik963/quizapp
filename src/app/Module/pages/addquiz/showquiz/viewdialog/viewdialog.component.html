@@ -1,0 +1,21 @@
+<h4 mat-dialog-title>{{data.value.question}}</h4>
+<img  *ngIf="data.value.imageName" [src]= "geturl(data.value.imageName)" alt="" style="width:200px; height: 200px;">
+<hr>
+<div class="container" >
+  <div  mat-dialog-content *ngFor="let item of data.value.options">
+    <p>{{item}}</p>
+  </div>
+</div>
+<hr>
+<div class="container">
+    <!-- <label mat-dialog-title>Answer</label> -->
+    <h6>Answer   <strong>{{data.value.answer}}</strong></h6>
+</div>
+<hr>
+<div class="container" >
+  <p>{{data.value.field}}</p>
+</div>
+<hr>
+<div mat-dialog-actions>
+  <button mat-flat-button color="warn" (click)="onNoClick()">close</button>
+</div>

@@ -1,0 +1,72 @@
+<app-adminnav></app-adminnav>
+<div style="margin-top: 80px;">
+    <mat-form-field style="width: 100%; color: blue; font-weight: 700; font-size: 20px;" appearance="outline" class="example-full-width">
+        <input matInput placeholder="Type to filter the Field column..."  (keyup)="updateFilter($event)"  >
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <ngx-datatable class="material" [limit]="8" [rows]="rows" [columnMode]="'force'" [rowHeight]="50"
+        [headerHeight]="50" [footerHeight]="50" [sorts]="[{prop: 'field', dir: 'desc'}]">
+
+        <ngx-datatable-column  name="Question">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.question}}
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column class="css" name="images">
+            <ng-template let-row="row"  ngx-datatable-cell-template>
+               {{row.imageName}} 
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column class="css" name="Answer">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.answer}}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column class="css" name="Options">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.options}}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column class="css" name="Field" prop="field">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.field}}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column class="css" name="View" prop="field">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button mat-flat-button color="primary" (click)="openDialog(row)"    aria-label="Example icon button with a delete icon">
+                    <!-- <mat-icon> <span class="material-icons">
+                      mode_edit
+                      </span></mat-icon> -->View
+                  </button>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column class="css" name="Edit" prop="field">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button mat-button color="basic" [routerLink]="['../editquiz/',row.id]" routerLinkActive="router-link-active"    aria-label="Example icon button with a delete icon">
+                    <mat-icon> <span class="material-icons">
+                      mode_edit
+                      </span></mat-icon>
+                  </button>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column class="css" name="Delete" prop="field">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button mat-button color="basic" (click) = "removequiz(row.id)"    aria-label="Example icon button with a delete icon">
+                    <mat-icon> <span class="material-icons">
+                      delete
+                      </span></mat-icon>
+                  </button>
+            </ng-template>
+        </ngx-datatable-column>
+
+
+
+    </ngx-datatable>
+</div>

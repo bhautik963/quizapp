@@ -1,0 +1,37 @@
+<!-- <mat-toolbar color="primary" class="mat-elevation-z3">
+    <span>Admin quiz</span>
+    <span class="example-fill-remaining-space"></span>
+
+    <button mat-flat-button style="margin-right: 10px;" [routerLink]="['/showquiz']" routerLinkActive="router-link-active"  color="warn">Show Quiz</button>
+    <span class="link" (click)="signOut()">
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon" style="transform: rotate(270deg);">save_alt</mat-icon>  SignOut
+    </span>
+
+</mat-toolbar>
+ -->
+
+ <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!-- <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button> -->
+      <h2>Admin Panel</h2>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/show'" routerLinkActive="active"> <mat-icon matSuffix>dashboard</mat-icon> Category </a>
+        <a mat-button [routerLink]="'/add'"><mat-icon matSuffix>add_circle</mat-icon> Add Category </a>
+        <a mat-button [routerLink]="'/addquiz'"><mat-icon matSuffix>add_box</mat-icon> Add Quiz </a>
+        <a mat-button [routerLink]="'/showquiz'"><mat-icon matSuffix>home</mat-icon> Show Quiz </a>
+        <a mat-button (click)="signOut()"> Logout <mat-icon matSuffix>logout</mat-icon> </a>
+        <!-- <a mat-button [routerLink]="'/create-activity'"> Create Activity </a> -->
+  
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container>
+  <mat-sidenav-content>
+    <div style="margin-top: 70px; text-align: center;" >
+      <h1>Welcome To Admin Panel</h1>
+   </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

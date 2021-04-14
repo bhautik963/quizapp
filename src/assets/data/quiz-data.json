@@ -1,0 +1,12 @@
+[
+    {
+        "quesID": 1,
+        "question": "Angular Js is based on",
+        "imageName": "",
+        "option": ["MVC Architecture",
+            "Decorator pattern",
+            "MVVM Architectural pattern",
+            "Observer Pattern"],
+        "answer": "3"
+    }
+]

@@ -1,0 +1,51 @@
+<body>
+
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxFlexFill="100%">
+          <mat-card class="W-100 mh-100" fxFlex="80%" fxFlex.xs="100%" [class.mat-elevation-z5]="true" fxLayout.xs="column">
+            <div class="auth-left" fxFlex="100%" fxLayoutAlign="center center">
+                <img src="/assets/img/q.jpg" alt=""  height="380px" >
+            </div>
+              <div class="auth-right"  style="margin-top: 10px;" fxFlex="50%" fxLayoutAlign="center center">
+                  <div class="form" fxFlex="80%">
+                      <mat-card-header>
+                        <mat-card-title>Welcome To  Quiz</mat-card-title>
+                      </mat-card-header>
+                      <form class="auth-form" fxLayout="column" fxLayoutAlign="center" [formGroup]="formGroup"
+                          (ngSubmit)="submitForm()">
+                          <!-- Username -->
+                          <mat-form-field appearance="outline">
+                              <mat-label>UserName</mat-label>
+                              <input matInput placeholder="UserName" formControlName="username" type="text"
+                                  autocomplete="off">
+                              <mat-icon matSuffix>person</mat-icon>
+                              <mat-error *ngIf="handleError('username', 'pattern')">
+                                Username must be alphanumeric not Allowed _ symbol and minimum 8 char
+                                </mat-error>
+                          </mat-form-field>
+                          <!-- Email -->
+                          <mat-form-field appearance="outline">
+                              <mat-label>Email</mat-label>
+                                 <input matInput placeholder="Email" formControlName="email" type="email" autocomplete="off">
+                              <mat-icon matSuffix>email</mat-icon>
+                                  <mat-error *ngIf="handleError('email', 'pattern')">
+                                    You must provide a <strong>gmail</strong> .com 
+                                  </mat-error>
+                          </mat-form-field>
+
+                          <mat-form-field appearance="outline">
+                            <mat-label>Choose an option</mat-label>
+                            <mat-select  formControlName="field" multiple>
+                                <mat-option [value]='item.Title' *ngFor="let item of fields">{{item.Title}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          <!-- Submit button -->
+                          <button type="submit" class="btn-block w-100" mat-raised-button color="primary"
+                           >Click To Start</button>
+                      </form>
+                  </div>
+              </div>
+          </mat-card>
+      </div>
+    </div>
+</body>

@@ -1,0 +1,31 @@
+<app-adminnav></app-adminnav>
+<div class="container" style="margin-top: 100px; top: 10px;">
+    <h1 style="text-align: center;">Question Category</h1>
+    
+        <mat-card *ngFor="let item of row" style="width: 100%; height: 290px; background-color:lightsteelblue; margin-top: 10px;">
+            <mat-card-title>{{item.Title}}</mat-card-title>
+           
+            <mat-card-content>
+                <h5>{{item.Discription}}</h5>
+            </mat-card-content>
+            <mat-card-content>
+                <img *ngIf="item.Title == 'Angular'" style="width: 90px; height: 80px;" src="https://github.com/angular/angular/blob/master/aio/src/assets/images/logos/angular/angular.png?raw=true">
+                <img *ngIf="item.Title == 'Node Js'" style="width: 90px; height: 80px;" src="https://pluspng.com/img-png/nodejs-png-nodejs-icon-png-50-px-1600.png">
+                <img *ngIf="item.Title == 'MongoDB'" style="width: 90px; height: 80px;" src="https://www.logianalytics.com/wp-content/uploads/2015/09/MongoDB.png">
+                <img *ngIf="item.Title == 'ReactJs'" style="width: 90px; height: 80px;" src="https://www.metaltoad.com/sites/default/files/styles/large_personal_photo_870x500_/public/2020-05/react-js-blog-header.png?itok=VbfDeSgJ">
+                <img *ngIf="item.Title == 'Javascript'" style="width: 90px; height: 80px;" src="http://radicalhub.com/wp-content/uploads/2018/07/javascript.jpg">
+            </mat-card-content>
+            <mat-card-content>
+                <button mat-flat-button color='warn' style="border-radius: 50%; height:60px;" (click)='qs.deleteCategory(item.id)'><mat-icon>delete</mat-icon></button>
+            </mat-card-content>
+        </mat-card>
+</div>
+<!-- <a [routerLink]="['../addquiz']" routerLinkActive="router-link-active"  class="float2">
+    <mat-icon class="my-float">edit</mat-icon>
+    </a>
+<a [routerLink]="['../add']" routerLinkActive="router-link-active"  class="float">
+    <mat-icon class="my-float">add</mat-icon>
+    </a> -->
+
+
+  

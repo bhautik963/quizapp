@@ -1,0 +1,51 @@
+<app-adminnav></app-adminnav>
+<body>
+  <div class="inner-wrapper">
+    <form [formGroup]="addquiz"  #resetBookForm="ngForm" novalidate>
+      <mat-card>
+        <h1>Add Quiz</h1>
+        <div class="controlers-wrapper">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <input matInput placeholder="Question" formControlName="question">
+          </mat-form-field>
+          <div formArrayName="options"  >
+            <div  *ngFor="let quantity of options.controls; let i=index" >
+            <mat-form-field style="width: 92%;" appearance="outline" class="example-full-width"  >
+                <input matInput placeholder="Option" formControlName="{{i}}">
+            </mat-form-field>
+            <button style="margin-left: 10px; width:5%; height:60px; border-radius: 50%;" mat-flat-button color="accent"(click)="remove(i)" *ngIf="i>1"><mat-icon mat-suffix>delete</mat-icon></button>
+            <button mat-flat-button style="margin-left: 10px; width:4%; height:70px; border-radius: 50%;" *ngIf="i<=0" (click)="addoption()" color="primary"><mat-icon mat-suffix>add_box</mat-icon></button>
+            </div>
+            
+          </div>
+          
+        
+         
+
+          <mat-form-field  appearance="outline" class="example-full-width">
+            <input matInput type='number' placeholder="Answer Only Number" formControlName="answer"> 
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Choose an option</mat-label>
+            <mat-select formControlName="field">
+              <mat-option [value]='item.Title' *ngFor="let item of row">{{item.Title}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+          <input type="file" (change)="uploadFile($event)"/>
+        </div>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button class="w-100" (click)="submitquiz()" color="primary">Submit</button>
+            <!-- <button mat-flat-button  color="accent" (click)="add.signOutadmin()">Go back</button> -->
+          </div>
+        </div>
+      </mat-card>
+    </form>
+  </div>
+</body>
+
+
+ 
+  

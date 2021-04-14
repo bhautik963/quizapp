@@ -1,0 +1,23 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+.container{
+  height: 100%;
+  mat-card {
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  
+  mat-form-field {
+    display: block;
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
+
